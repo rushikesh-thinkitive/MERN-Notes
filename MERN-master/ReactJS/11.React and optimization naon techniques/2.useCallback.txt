@@ -1,0 +1,56 @@
+! Important -
+
+1) useCallback is a react Hook.
+2) It creates memoized version of a function.
+3) The memoized function retains its identity (i.e the same reference) across re-renders unless it's dependencies change.
+4) Syntax - 
+   const memoizedCallback = useCallback(
+        () => {
+            // Function logic
+        },
+        [dependency1, dependency2] // Dependency array
+    );
+
+    where, 
+      The first argument is the function to be memoized.
+      The second argument is the dependency array. If any of these dependencies change, the memoized function is recalculated.
+
+5) In React, components re-render when their state or props change. If you create new functions within a component (like event handlers), 
+   React treats them as new instances, which can cause re-renders in child components relying on these functions.
+
+6) Using useCallback helps maintain the same function reference across re-renders, preventing unnecessary re-renders in child components
+   or when passing functions as dependencies to other hooks like useEffect or useMemo.
+
+   [ means jb bhi event handler chalega tb tb new function object create hoke oo execute hoga that can cause performance issues 
+     so jb useCallback use krenge tb function id same rehega so it will increase performance.
+   ]
+
+7) Ex - 
+    Event Handlers -
+
+    Suppose you have a button with an event handler. Without useCallback, a new function is created every time the component re-renders, 
+    causing potential performance issues.
+
+
+8) Ex -
+   
+   import React, { useEffect, useCallback, useState } from 'react';
+
+    const MyComponent = () => {
+    const [count, setCount] = useState(0);
+
+    const incrementCount = useCallback(() => {
+        setCount((prevCount) => prevCount + 1);
+    }, []); // No dependencies, retains same reference
+
+    useEffect(() => {
+        const timer = setInterval(incrementCount, 1000);
+        return () => clearInterval(timer);
+    }, [incrementCount]); // Depend on memoized function
+
+    return <div>Count: {count}</div>;
+    };
+
+    export default MyComponent;
+
+

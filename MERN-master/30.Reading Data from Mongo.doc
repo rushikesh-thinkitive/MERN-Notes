@@ -1,0 +1,7 @@
+1) According to the standard, we should create one file for the connection with DB 
+2) Other CRUD operation should use this connection file
+3) Ex:
+
+ 
+mongodb.JS
+

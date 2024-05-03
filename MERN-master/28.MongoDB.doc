@@ -1,0 +1,63 @@
+1) MongoDB is open-source, NoSQL database.
+2) NoSQL Database : NoSQL databases doesn't depend on tabular schema. It stores data in JSON format.
+3) Document Oriented : document in MongoDB contains data in collection. the schema of every document can be different which make it dynamic.
+4) Schemaless : MongoDB is schemaless. In mongoDB, the schema of every document can be different.
+5) Rich Query Language : MongoDB provides a powerfull query language that provides a wide range of queries.
+
+
+1. How to create Database :
+-> use DBName
+
+2. How to create table/collection :
+-> db.createCollection('tableName');
+
+3. How to delete Database :
+-> db.dropDatabase('DBName');
+
+4. How to delete Collection :
+-> db.collection_Name.drop();
+
+5. All collections in selected Database :
+-> show collections;
+
+6. insert | Create
+-> To insert Data we have 2 methods:
+
+   insertOne() : To insert One document in Database
+   ->db.Employee.insertOne({id:1,Name:"RK",age:22})
+
+   insertMany() : To insert Array of objects/document
+   ->db.Employee.insertMany([{id:2,Name:"Ajinkya",age:23},{id:3,Name:"Vedant",age:22}])
+
+7. Read 
+-> For reading data we have 2 methods:
+   
+   find() : return all document from collection
+   -> db.Employee.find()
+
+   findOne() : return specific document
+   -> db.Employee.findOne({id:1})
+
+
+8. update
+-> To update Data we have 2 methods:
+
+   updateOne() : To update one document
+   -> db.Employee.updateOne({id:3},{$set:{age:23}})
+
+   updateMany() : To update Many Documents
+   -> db.Employee.updateMany({id:1},{$set:{salary:40000}})
+
+   -> db.Employee.updateMany({id:{$gt:1}},{$set:{salary:30000}})
+
+8. delete
+-> To delete We have 2 methods:
+
+   deleteOne() : To delete One document
+   -> db.Employee.deleteOne({id:3})
+
+   deleteMany() : To delete Many Document
+   -> db.Employee.deleteMany({id:{$gt:1}})
+
+
+

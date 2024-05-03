@@ -1,0 +1,28 @@
+
+1) useMemo is hook
+2) useMemo can improve performance by caching results instead of recalculating them each time the component re-renders
+3) useMemo is beneficial -
+   1) Expensive calculations 
+   2) Filter list of active users data 
+   3) Complex Object Creation
+
+4) Ex - Filtering list of active users data -
+
+   import React, { useMemo } from 'react';
+
+    const UserList = ({ users }) => {
+    const activeUsers = useMemo(() => {
+        console.log('Filtering active users...');
+        return users.filter(user => user.active);
+    }, [users]);
+
+    return (
+        <ul>
+        {activeUsers.map(user => (
+            <li key={user.id}>{user.name}</li>
+        ))}
+        </ul>
+    );
+    };
+
+    export default UserList;

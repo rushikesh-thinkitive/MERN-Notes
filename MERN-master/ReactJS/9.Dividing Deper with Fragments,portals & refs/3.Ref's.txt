@@ -1,0 +1,9 @@
+
+1) Refs in React allow you to directly access a DOM element or a React component instance, providing a bridge to interact with the rendered output. 
+2) Ex - usecases - 
+   Focus an Input
+   Control a video or audio element
+3) refs in functional components is using the useRef hook
+
+
+Note - for simple forms or when direct control isn't necessary, uncontrolled components can be a quick and effective solution.

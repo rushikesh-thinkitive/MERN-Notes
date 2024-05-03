@@ -1,0 +1,14 @@
+1) In JS, one Module is called one Javascript file
+2) Node.js has set of built-in modules which we can use without any installation
+3) By using fs( File System) we can manipulate files and folders.
+4) we can import modules in nodejs by using require() method
+
+   using require() function
+
+   Ex:
+   //Importing a built in modules
+    const fs = require('fs');
+      
+
+    // importing a module from file
+    const myModule = require("./myModule");

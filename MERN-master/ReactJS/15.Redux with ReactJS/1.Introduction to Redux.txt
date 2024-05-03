@@ -1,0 +1,17 @@
+
+1) Redux is an open source javascript library
+2) Redux is used to manage application state 
+3) It is most commonly used with libraries such as React or Angular for building user interfaces.
+4) Here, In react Redux toolkit is more popular to manage state in efficient way
+5) why we should use Redux -
+
+   suppose, there is a parent child hierarchy, means 1 parent ke 10 right child hai and 7 left child so agar muze
+   last 2 dono sub tree me in state ko use krna ho to hm data ko props ke through pass krkr use krskte hai but 
+   between childs me hm unnecessary data ko pass kr rhe hai
+   
+   so isse bachne ke liye hm ReactContext ka use kr skte hai so isse hm directly kisi bhi child me data ko access
+   krr skte hai, but isses bhi easy and popular way hai i.e Redux toolkit
+
+6) Redux provide us a store in which we will store data
+7) and we can use that data anywhere even if not parent child relationship between components
+8) Therefore redux is called as centralized state management

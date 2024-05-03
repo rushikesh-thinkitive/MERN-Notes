@@ -1,0 +1,15 @@
+
+1. React fragment is a special kind of react component that allows you to group multiple elements without adding extra 
+   nodes to the DOM ( Document Object Model). like div
+
+2. This is useful when u want to return multiple element from component
+3. In react, every component must return single root element
+4. Syntax for adding react Fragment ( <> </>)
+   Ex - 
+      const MyComponent = () => (
+        <>
+            <h1>Title</h1>
+            <p>Description</p>
+        </>
+    );
+

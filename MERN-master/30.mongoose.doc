@@ -1,0 +1,14 @@
+1) Mongoose is a module
+2) Mongoose is used to connect nodeJS with MongoDB
+3) Mongoose provide us advance features to control schema operations
+   Ex:
+
+   agar kisi collection 4 columns hai and hme restrict krna hai user 5th column nhi add kr ske to ye hm mongodb package se nhi kr skte
+   mongodb se advance feature apply krne ke liye hme manually code likhna pdega jo mongoose by default provide krta hai.
+   so, this advance feature is provide by the mongoose module.
+   we can also provide validations on the data provide by user. means we can decide which type data only be store into schema.
+
+4) cmd to install mongoose
+-> npm i mongoose
+
+5) 

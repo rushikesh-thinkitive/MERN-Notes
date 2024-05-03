@@ -1,0 +1,15 @@
+1. express is a nodejs framework which is used for building API
+2. Key Feature of API :
+   1) Routing : Express provides simple way to handle route for handling different HTTP methods
+       Ex:  GET, POST, PUT, DELETE
+
+   2) Middleware : Express middleware functions allow developers to extend request-response cycle with custom logic.
+      It performs action like parsing request bodies, authenticate users, logging users, Error Handling.
+
+   3) Template Engine : Template Engine Allows to generate Dynamic content on HTML page
+
+   4) Static File Serving : Express can server static files such as HTML, css, javascript, images, audios, videos with
+      built in middleware functions 'express.static'
+
+   5) RESTful Api's : Expresss is commonly used to build RESTful API.
+

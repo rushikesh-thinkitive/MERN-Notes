@@ -1,0 +1,15 @@
+1) npm init
+2) install required modules -
+   express
+   mongoose
+   body-parser
+3) Create routes, models, controllers dir
+4) Create db dir for making connection with db
+5) Define controllers
+6) Define routes
+7) Define Registration form and link with routes
+
+
+To hash password, we use decrypt module.
+> npm i decrypt
+

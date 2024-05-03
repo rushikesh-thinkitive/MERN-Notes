@@ -1,0 +1,20 @@
+For rendering HTML pages according to route we need to load HTML pages at nodejs.
+
+1) All HTML files are stored in public folder.
+2) and we need to access it in index.JS
+
+Ex:
+const express = require('express');
+const app = express();
+const path = require('path');
+
+const dirName = path.join(__dirname,'public');
+
+app.use(express.static(dirName));               // This method load static content of the project in index.js (images,audios,pdf,html files etc)
+
+app.listen(8000);
+
+
+
+where, use -> is a middleware
+       static -> load static content of the project

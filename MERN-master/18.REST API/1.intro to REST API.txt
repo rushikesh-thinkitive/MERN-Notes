@@ -1,0 +1,52 @@
+
+1) REST is an architectural style for designing networked applications
+2) ExpressJS is a web application framework for NodeJS, is commonly used to build RESTful API's 
+3) In a RESTful API, resources are the key abstraction. 
+4) A resource can be any information that can be named such as document, an image, or user.
+5) Each resource is identified by a unique URL.
+6) RESTful APIs use HTTP methods(GET,POST,PUT,DELETE) to perform CRUD operations on resources.
+   GET - Retrieve Resource
+   POST- Create new Resource
+   PUT - Update complete Resource
+   PATCH - Update some resource
+   DELETE - Delete Some Resource
+
+7) Ex- const express = require('express');
+    const app = express();
+
+    // GET request to retrieve a list of users
+    app.get('/users', (req, res) => {
+        res.json({ users: [...users] });
+    });
+
+    // POST request to create a new user
+    app.post('/users', (req, res) => {
+        res.status(201).json({ message: 'User created successfully' });
+    });
+
+    // PUT request to update a user
+    app.put('/users/:id', (req, res) => {
+        const userId = req.params.id;
+        res.json({ message: `User with ID ${userId} updated successfully` });
+    });
+
+    // DELETE request to delete a user
+    app.delete('/users/:id', (req, res) => {
+        const userId = req.params.id;
+        res.json({ message: `User with ID ${userId} deleted successfully` });
+    });
+
+
+    // Start the server
+    app.listen(3000, () => {
+        console.log('Server is running on port 3000');
+    });
+
+8) In REST API, we don't render content, we only sends json response through response object;
+   Ex-
+       res.json(obj)
+
+    But, according to the standard, we need to send the status code with request
+
+    Ex-
+       res.status(200).json(obj)

@@ -1,0 +1,6 @@
+
+Important Rules about Hooks
+
+1) In react hook is prefixed with use
+2) Hook must be used inside function component or Custom Hooks only
+3) React Hooks must call at the top of React Component

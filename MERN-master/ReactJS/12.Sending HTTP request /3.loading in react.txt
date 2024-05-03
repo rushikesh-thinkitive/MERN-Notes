@@ -1,0 +1,9 @@
+
+1) In React, we display loading by managing state
+2) Ex-
+    const [isLoading, setLoading] = useState(true); 
+
+
+   if (isLoading) {
+    return <div>Loading...</div>; // Show loading indicator
+  }

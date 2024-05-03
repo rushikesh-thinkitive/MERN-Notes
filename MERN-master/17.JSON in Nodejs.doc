@@ -1,0 +1,30 @@
+1) JSON stands for Javascript Object Notation.
+2) JSON is a lightweight format for storing and transporting data.
+3) JSON is used to send data from server to web page
+4) In JS/NodeJS, If we want to convert object into JSON so we can use stringify() method
+   Ex:
+       const data = {
+            name :"RK",
+            age :22,
+            salary : 450000
+        }
+
+        const JSONData = JSON.stringify(data);
+        console.log(JSONData);
+
+5) But, we can not access JSON data by using . operator or [] operator
+6) TO access data from JSON, we need to convert JSON into JS object
+7) we can convert JSON to object by using parse() method
+    Ex:
+    const JSONData = JSON.stringify({
+            "name": "RK",
+            "age": "22",
+            "salary": "45000"
+        });
+
+        const obj = JSON.parse(JSONData);
+        console.log(obj)
+
+8) we can not create JSON object without using stringify() method
+
+         

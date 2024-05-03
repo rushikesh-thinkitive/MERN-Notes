@@ -1,0 +1,6 @@
+1) NodeJS is a runtime environmnet which allows you to execute JS code on server
+2) NodeJS is a server side technology
+3) NodeJS is not library, not Framework
+4) NodeJS uses v8 engine to execute JS code
+5) Chrome also uses v8 engine to execute JS code
+6) Nodejs provides an event driven, non-blocking I/O model that makes it well suited for real time applications.

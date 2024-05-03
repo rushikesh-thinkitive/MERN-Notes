@@ -1,0 +1,12 @@
+1) os is module in nodejs.
+2) os module provides methods by using we can perform operations related to the operating system on which nodeJS running.
+
+Ex:
+
+   const os = require('os');
+   os.platform();    // return platform name -> win32,linux,darwin
+   os.arch();        // return architecture of operating system
+   os.hostname();    // return hostname of os
+   os.type();        // return OS name  ->  Windows,linux,darwin
+
+   

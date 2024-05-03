@@ -1,0 +1,9 @@
+Required Modules for project -
+
+1) express
+2) nodemon
+3) mongoose
+4) dotenv
+5) jwt   (jsonwebtoken)   ( used to implement jwt)
+6) bcrypt
+7) nodemailer

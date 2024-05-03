@@ -1,0 +1,36 @@
+
+In express, To render HTML and JSON we can use send() method.
+Ex:  For rendering HTML :
+
+
+const express = require('express');
+const app = express()
+
+
+app.get('',(req,res)=>{
+    
+    res.send(`Welcome ${req.query.name} <br>
+     <a href="/aboutus">ABout Us</a>
+    `);
+})
+
+
+
+Ex:  For rendering JSON :
+
+
+const express = require('express');
+const app = express()
+
+
+app.get('',(req,res)=>{
+
+    const obj = {
+        "name":"RK",
+        "age":"22",
+        "salary":"40000"
+    }
+    res.send(obj);
+})
+
+

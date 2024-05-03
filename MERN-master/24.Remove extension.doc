@@ -1,0 +1,32 @@
+1) In above topic we access HTML file through writing url
+    Ex:  localhost:8000/about.html
+
+2) But we don't want to show url in url bar because we don't show user that which technology we use.
+
+Ex:
+   const express = require('express');
+    const app = express();
+    const path = require('path');
+
+
+    const dirName = path.join(__dirname,'public');
+
+    app.get('',(req,res)=>{
+        res.sendFile(`${dirName}/index.html`)
+    })
+    app.get('/about',(req,res)=>{
+        res.sendFile(`${dirName}/About.html`)
+    })
+    app.get('/contact',(req,res)=>{
+        res.sendFile(`${dirName}/Contact.html`)
+    })
+    app.get('*',(req,res)=>{
+        res.sendFile(`${dirName}/noPage.html`)
+    })
+
+    app.listen(8000)
+
+
+
+Where, sendFile()  -> is used to send HTML file to the browser
+       send()    ->  is used to send HTML content to the browser

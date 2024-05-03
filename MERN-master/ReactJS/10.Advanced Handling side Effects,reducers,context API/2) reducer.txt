@@ -1,0 +1,7 @@
+1) Reducers are used to managing changes to a state.
+2) a reducer is a function that takes two inputs - 
+   current state - This is the current "snapshot" of what you're managing.
+   action - This is a description of the change you want to make to the state.
+3) Reducer means combine
+4) Reducer combines this 2 things to provide new state.
+5) Reducers are useful when you're managing complex or evolving state.

@@ -1,0 +1,11 @@
+
+1) In ExpressJS, Handling asynchronous request efficiently is crucial for building scalable and responsive application
+2) Asynchronous requests are used when performing operations that may take some time to complete 
+   Ex -  querying to Database
+         making HTTP request to external API
+         performing I/O file operations
+
+3) To do this, we use async and await to handle this kind of tasks
+4) suppose, there is request which fetch data(1000 records) from database so that time we will make that 
+   request asynchronous. because it is time consuming process.
+   

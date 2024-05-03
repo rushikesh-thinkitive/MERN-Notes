@@ -1,0 +1,6 @@
+1) module :- one module means one Javascript file which contains reusable entities.
+             For creating module, need to add explicitly export in .js file.
+
+2) package :- package is a collection of modules and one special file called package.json.
+              package.json describe the package metadata and dependencies.
+

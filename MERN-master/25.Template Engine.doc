@@ -1,0 +1,76 @@
+1) If the page is filled with same content always that's static page
+2) If data comes from DB on page that's called Dynamic Page.
+3) ejs is a template engine in node JS
+4) Template engine is used to generate Dynamic content on HTML page
+5) To setup template engine, we use set() method.
+
+-> app.set('view engine','ejs');
+
+where, view engine ->  mentioned that we are using view engine
+       ejs   ->   This is a template engine
+
+6) so by default all view should store in views directory, It's a by default configuration.
+7) but extension should be .ejs
+8) In .ejs file, we write HTML code.
+
+
+Rendering of ejs file on Browser:
+
+Ex:
+    const express = require('express')
+    const app = express()
+    
+    app.set('view engine','ejs');
+
+    app.render('/profile',(req,res)=>{
+        res.render('profile');
+    })
+    app.listen(8000);
+
+9) How to render Dynamic Data:
+
+Ex:
+
+   index.JS 
+    
+    const express = require('express');
+    const app = express();
+    // const path = require('path');
+
+    app.set('view engine','ejs');
+
+    app.get('/profile',(req,res)=>{
+        const user = {
+            name:"RK",
+            email:"rk@gmail.com",
+            city:"Pune,Baner",
+        }
+        res.render('profile',{user});
+    })
+
+
+    app.listen(8000)
+
+
+    profile.ejs 
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Page</title>
+    </head>
+    <body>
+        <h1>Welcome <%= user.name %></h1>
+        <h2>Email: <%= user.email %></h2>
+        <h2>City: <%= user.city %></h2>
+    </body>
+    </html>
+  
+
+
+  where, 
+
+     <% ... %> is for executing JavaScript code without rendering output.
+     <%= ... %> is for displaying dynamic content obtained from JavaScript variables or expressions

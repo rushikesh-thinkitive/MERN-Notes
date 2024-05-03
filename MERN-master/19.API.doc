@@ -1,0 +1,9 @@
+1) API stands for Application Programming Interface.
+2) API is a software intermediary that allows two application to communicate with each other.
+3) API is like a service through which we can request for the data.
+4) Ex:   Each time you use an app like Facebook, send an instance message, or check the weather on your phone, you are using an API.
+
+5) If we want to fetch data from API then we use requests module
+   in requests module, requests() method is used to fetch data from API
+
+   Ex:  

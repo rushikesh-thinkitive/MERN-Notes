@@ -1,0 +1,8 @@
+1) REPL stands for Read Eval Print Loop
+2) REPL feature is very useful to see the output of JS code
+
+   Read : Read's users input
+   eval : Takes and evaluates the data structure
+   print: Prints the result
+   loop : Loop the above command until user doesn't press enter key
+

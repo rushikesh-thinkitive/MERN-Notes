@@ -1,0 +1,37 @@
+1) url is module in NodeJS.
+2) If user enter any url at url bar so that url we can access in nodeJS by using url module.
+3) If we hit any url then it ask for the fabicon url.
+4) In node js, we can handle request and response by using if else control statement
+
+  Ex:
+
+    const http = require('http');
+
+
+    const server = http.createServer((req,res)=>{
+        console.log(req.url);
+        if(req.url == '/contactus')
+            res.end("This is Contact Us page");
+        else
+            res.end("Listening from the other side");
+    })
+
+    server.listen(8000,'127.0.0.1',()=>{
+        console.log("Listening to the port 8000");
+    })
+
+
+5) when we return response, if there is header so that time we can change header content as well
+
+   Ex:
+
+   const server = http.createServer((req,res)=>{
+        console.log(req.url);
+        if(req.url == '/contactus')
+            res.end("This is Contact Us page");
+        else
+        {
+            res.writeHead(404,{'content-type':"text/html"});            // By using this line we can change values in Network tab at browser          
+            res.end("<h1> Listening from the other side </h1>");        // we can change status code and content type in browser
+        }
+    })

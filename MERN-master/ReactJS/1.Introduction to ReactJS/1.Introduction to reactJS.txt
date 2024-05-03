@@ -1,0 +1,15 @@
+1) ReactJS is an open-source javascript library for building user interfaces and web applications
+2) ReactJS was developed by Facebook.
+3) ReactJS is widely used for creating interactive and dynamic UI components in single page applications.
+4) React uses component Based Architecture
+5) React uses virtual DOM - 
+   DOM (Document Object Model) to optimize UI updates. Instead of directly manipulating the browsers DOM, React creates In-memory representation of the DOM, 
+   known as virtual DOM. when state of the application changes, React compares the virtual DOM with previous version and computes most efficient way to 
+   update the actual DOM. This minimizes DOM manipulation and improve performance
+
+6) JSX - javascript And XML is a syntax extention for javascript that allows developers to write HTML like code in javascript.
+         JSX makes it easier to create react components by blending HTML and javascript together.
+         JSX code is transformed into regular javascript function by babel before It's executed in browser.
+
+7) In react, data flow is like from parent to child by using props
+

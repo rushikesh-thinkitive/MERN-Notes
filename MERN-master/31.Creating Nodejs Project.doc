@@ -1,0 +1,5 @@
+Steps to create NodeJS Project :-
+
+1) create index.js file
+2) Create Package.JSON 
+3) install expressJS, Mongoose, nodemon packages

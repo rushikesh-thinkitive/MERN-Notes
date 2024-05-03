@@ -1,0 +1,6 @@
+
+1) React App can be connect to database like sql,NoSQL
+2) But it is not good practice that we directly connect React App with database without backend
+3) If we did then database credentials would be exposed in the browser
+   It also gives performance issues
+

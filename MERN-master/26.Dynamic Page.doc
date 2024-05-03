@@ -1,0 +1,51 @@
+1) How to make loop in ejs  :-
+
+profile.ejs :--
+
+  <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Page</title>
+    </head>
+    <body>
+        <h1>Welcome <%= user.name %></h1>
+        <h2>Email: <%= user.email %></h2>
+        <h2>City: <%= user.city %></h2>
+
+        <ul>
+            <% user.skills.forEach((skill)=>{ %>
+            <li> <%= skill %>  </li>
+
+            <% })%>
+            
+        </ul>
+    </body>
+    </html>
+
+
+index.js :--
+
+const express = require('express');
+const app = express();
+// const path = require('path');
+
+app.set('view engine','ejs');
+
+app.get('/profile',(req,res)=>{
+    const user = {
+        name:"RK",
+        email:"rk@gmail.com",
+        city:"Pune,Baner",
+        skills: ['Javascript','NodeJS','ExpressJS','MongoDB','Python','Django REST Framework','C','CPP','DSA','SQL']
+    }
+    res.render('profile',{user});
+})
+
+
+app.listen(8000)
+
+
+
+

@@ -1,0 +1,24 @@
+1) To access web application, you need a web server.
+2) Web server will handle all the http request for the web application.
+
+3) eg.IIS is a web server ASP.NET application
+   Tomcat is a web server in PHP and Java web applications
+4) Node JS provides capability to create your own web server that can handle HTTP request asynchronously.
+5) we can use IIS,tomcat to handle HTTP request in nodeJS application but creating our own web server is recommended.
+
+6) The http.createServer() method includes request and response parameters which is supplied by nodeJS
+7) The request object can be used to get information about the current HTTP request
+   Ex:  url,request header and data
+
+8) The response object can be used to send a response for a current HTTP request
+9) If the response from the http server is supposed to be displayed as HTML,
+   You should include an HTTP header with correct content type
+
+
+HTTP :
+
+1) HTTP is a module in nodejs
+2) HTTP module allows to transfer data over the HTTP.
+3) to include HTTP: 
+    const http = require('http');
+

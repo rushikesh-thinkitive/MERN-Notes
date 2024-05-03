@@ -1,0 +1,7 @@
+1) Synchronous Programming :-
+        Synchronous Programming in nodejs refers to the execution of code in sequencial and blocking manner.
+        In Synchronous Programming, Each operation is performed one after the other in which manner they are written.
+        here, each operation must complete after next one begin.
+
+2) Asynchronous Programming :-
+        Asynchronous Programming refers where operations are executed cocurrently without blocking the execution of other code.

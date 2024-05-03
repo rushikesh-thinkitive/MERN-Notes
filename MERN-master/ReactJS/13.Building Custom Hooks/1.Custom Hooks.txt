@@ -1,0 +1,42 @@
+
+1) A custom hook in react is a reusable javascript function
+2) It start's with word use
+3) allows you to extract and encapsulate logic that can be shared across multiple components
+4) Custom hook allows you to write reusable code that can include react state,effects,context, and 
+   other react features
+5) Main advantage is that we can reuse the code.
+6) Custom hooks should be inside hooks directory.
+7) Example- we can define custom hook for fetching data.
+
+
+        import { useState, useEffect } from 'react';
+
+        // Define a custom hook that fetches data from a URL
+        function useFetchData(url) {
+        const [data, setData] = useState(null);
+        const [loading, setLoading] = useState(true);
+        const [error, setError] = useState(null);
+
+        useEffect(() => {
+            const fetchData = async () => {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                const result = await response.json();
+                setData(result);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+            };
+
+            fetchData();
+        }, [url]); // The effect runs when the URL changes
+
+        return { data, loading, error };
+        }
+
+        export default useFetchData;

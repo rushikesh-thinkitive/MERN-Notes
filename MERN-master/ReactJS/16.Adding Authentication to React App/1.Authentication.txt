@@ -1,0 +1,7 @@
+
+1) Authentication means protected routes can only accessible by verified user
+   so for that we authenticate user
+2) Authentication details is generally took from login form.
+   Then that data verifies from backend this user exist or not if exist then he is authenticate user
+
+3) 

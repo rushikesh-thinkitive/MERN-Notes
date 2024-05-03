@@ -1,0 +1,11 @@
+
+If user enter data in url bar how to access that data into nodejs.
+Ex:
+     localhost:8000/?name="Rahul"
+
+
+const http = require('http');
+http.createServer((req,res)=>{
+    console.log("Accessing Query Parameter Name:",req.query.name);
+})
+

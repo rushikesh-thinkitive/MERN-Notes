@@ -1,0 +1,5 @@
+1) Middleware is only used with routes
+2) Middlewares are functions which has access on request and response.  
+3) Middlewares can modify request and response.
+4) we can check user is logged in or not by Middleware
+5) Middlewares only used if we want to make changes in request and response.

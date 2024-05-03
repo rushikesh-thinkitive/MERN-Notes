@@ -1,0 +1,5 @@
+1) To make connection of MongoDB with Nodejs, we require MongoDB nodejs driver
+   cmd ->  npm i mongodb
+
+2) In nodejs, we can connect with multiple database within same program.
+3) 

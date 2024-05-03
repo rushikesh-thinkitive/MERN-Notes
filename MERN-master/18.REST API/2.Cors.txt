@@ -1,0 +1,14 @@
+cors -> cross origin resource sharing
+
+1) when we try to share resources across same domain (on same port no) which client and server side have so that 
+   time we can pass data without any error
+2) But if the port no of client side and server side is different then cors error occur
+   because, we cant share resources across different domains
+3) But In REST api, we need to share resources across domain
+4) so, to overcome from this error we need to include middleware, 
+   app.use((req,res,next)=>{
+    res.setHeaders('Access-Control-Allow-origin','*'),    // allow all domain to request to server
+    res.setHeaders('Access-Control-Allow-Methods','GET, POST, PUT, PATCH, DELETE'), 
+    res.setHeaders('Access-Control-Allow-Headers','Content-Type, Authorization'), 
+    next();
+   })
